@@ -2,8 +2,8 @@
 
 
 /**
- * get_input - function get line minus the newline
- * @info: parameter structure
+ * get_input - function get a line minus the newline
+ * @info: a parameter structure
  * Return: number of bytes
  */
 ssize_t get_input(info_t *info)
