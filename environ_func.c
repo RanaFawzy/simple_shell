@@ -57,7 +57,7 @@ return (0);
 
 
 /**
- * _getenv - func get the value of an environment variables
+ * _getenv - func to get value of an environment variables
  * @info: Structure containing potential arguments. Used to maintain
  * @name: the variable name
  * Return: environment value
