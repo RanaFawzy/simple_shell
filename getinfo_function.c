@@ -37,7 +37,7 @@ void set_info(info_t *info, char **av)
 
 /**
  * clear_info - function to initial info_t struct
- * @info: address of structure
+ * @info: the address  structure
  */
 
 
@@ -51,7 +51,7 @@ void clear_info(info_t *info)
 
 
 /**
- * free_info - function to free info_t struct fields
+ * free_info - function to free the info_t struct field
  * @info: address of structure
  * @all: true if all fields become free
  */
