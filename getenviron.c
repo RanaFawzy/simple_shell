@@ -79,11 +79,11 @@ int _unsetenv(info_t *info, char *var)
 }
 
 /**
- * get_environ - function return str array copy of our environ
- * @info: Structure containing potential arguments. Used to maintain
- *          constant function prototype.
+ * get_environ - function that return str array copy of our environ
+ * @info: Structure of potential argument maintain function prototype.
  * Return:  0 (true)
  */
+
 char **get_environ(info_t *info)
 {
 if (!info->environ || info->env_changed)
