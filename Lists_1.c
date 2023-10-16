@@ -1,9 +1,9 @@
 #include "shell.h"
 
 /**
- * list_to_strings - returns array of strings the list->str..
+ * list_to_strings - returns array string the list->str..
  * @head: pointer first nodee,...
- * Return: array of strings,...
+ * Return: array strings,...
  */
 char **list_to_strings(list_t *head)
 {
@@ -35,8 +35,8 @@ return (strs);
 /**
  * node_starts_with - returns node whose string starts with prefix,.,.
  * @node: pointer tlist head,.,..
- * @c: the next character after prefix to match,...
- * @prefix: string to match,,,,,
+ * @c: the next character after prefix match,...
+ * @prefix: string match,,,,,
  * Return: match node or null,,,,
  */
 list_t *node_starts_with(list_t *node, char *prefix, char c)
@@ -52,9 +52,9 @@ node = node->next;
 return (NULL);
 }
 /**
- * print_list - prints all elements of list_t linked list,...
+ * print_list - prints all elements list_t linked list,...
  * @h: pointer first nodee,...
- * Return: size of list,.,..
+ * Return: size list,.,..
  */
 size_t print_list(const list_t *h)
 {
@@ -72,10 +72,10 @@ i++;
 return (i);
 }
 /**
- * get_node_index - gets the index of  nodee,...
+ * get_node_index - gets the index nodee,...
  * @node: pointer the nodee,...
  * @head: pointer list head,...
- * Return: index of node or -1
+ * Return: index node or -1
  */
 ssize_t get_node_index(list_t *head, list_t *node)
 {
