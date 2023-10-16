@@ -8,3 +8,4 @@ And you should both understand every single line of code that any of you pushes.
 
 
 The shell is an incredibly cool project.
+It’s time for the famous Simple Shell project
