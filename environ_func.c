@@ -30,17 +30,17 @@ int _putsfd(char *str, int fd)
 
 int _myunsetenv(info_t *info)
 {
-	int i;
+int i;
 
-	if (info->argc == 1)
-	{
-		_eputs("Too few arguements.\n");
-		return (1);
-	}
-	for (i = 1; i <= info->argc; i++)
-		_unsetenv(info, info->argv[i]);
+if (info->argc == 1)
+{
+	_eputs("Too few arguements.\n");
+	return (1);
+}
+for (i = 1; i <= info->argc; i++)
+	_unsetenv(info, info->argv[i]);
 
-	return (0);
+return (0);
 }
 
 
