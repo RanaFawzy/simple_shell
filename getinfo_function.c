@@ -1,8 +1,8 @@
 #include "shell.h"
 
 /**
- * set_info - function to initial info_t struct
- * @info: structure address
+ * set_info - function to inital info_t struct
+ * @info: structre address
  * @av: argum vector
  */
 
