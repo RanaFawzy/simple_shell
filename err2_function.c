@@ -23,7 +23,7 @@ void print_error(info_t *info, char *estr)
  * _erratoi - function convert a str to  int
  * @s:  str to be converted
  * Return: 0 (number wasn’t string
-* converted number otherwise
+ *         converted number
  *       -1 (failure)
  */
 
