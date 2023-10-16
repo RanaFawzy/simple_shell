@@ -47,11 +47,11 @@ ssize_t get_input(info_t *info)
 
 
 /**
- * _getline - function get next line of input from STDIN
- * @info: parameter structure
+ * _getline - function get the next line of input from STDIN
+ * @info: the parameter structure
  * @ptr: add of pointer to buffer pre_allocated or NULL
  * @length: size of pre_allocated pointer buffer if not NULL
- * Return: s
+ * Return: s success
  */
 
 int _getline(info_t *info, char **ptr, size_t *length)
