@@ -49,10 +49,10 @@ char *_strncat(char *dest, char *src, int n)
 
 
 /**
- **_strchr - locates a character in a string
+ **_strchr - locates  character in a string
  *@s: str
- *@c:  character find
- *Return:  pointer (s)
+ *@c:  charactethe r find
+ *Return:  pointr (s)
  */
 char *_strchr(char *s, char c)
 {
@@ -75,23 +75,23 @@ char *_strchr(char *s, char c)
 
 char *_strncpy(char *dest, char *src, int n)
 {
-	int i, j;
-	char *s = dest;
+int i, j;
+char *s = dest;
 
-	i = 0;
-	while (src[i] != '\0' && i < n - 1)
+i = 0;
+while (src[i] != '\0' && i < n - 1)
+{
+	dest[i] = src[i];
+	i++;
+}
+if (i < n)
+{
+	j = i;
+	while (j < n)
 	{
-		dest[i] = src[i];
-		i++;
+		dest[j] = '\0';
+		j++;
 	}
-	if (i < n)
-	{
-		j = i;
-		while (j < n)
-		{
-			dest[j] = '\0';
-			j++;
-		}
-	}
-	return (s);
+}
+return (s);
 }
