@@ -1,7 +1,7 @@
 #include "shell.h"
 
 /**
- * remove_comments -  replace 1st instance of '#' with '\0'
+ * remove_comments - function replace 1st instance of '#' with '\0'
  * @buf: modified string address
  * Return: void
  */
