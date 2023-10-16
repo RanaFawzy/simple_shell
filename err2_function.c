@@ -89,7 +89,7 @@ char *convert_number(long int num, int base, int flags)
 
 
 /**
- * print_d -  prints  decimal (int) number (base 10)
+ * print_d -  function to print decimal int number (base 10)
  * @input:  input number
  * @fd:  file descriptor write into it
  * Return: decimal number
