@@ -79,7 +79,7 @@ return (1);
 }
 
 /**
- * _putfd - function puts character c to given fd
+ * _putfd - function that put character c to given filedescription
  * @c: input char
  * @fd: file descriptors
  * Return: 1 (true)
