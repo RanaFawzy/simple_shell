@@ -85,3 +85,38 @@ if (!*++p)
 unset_alias(info, str);
 return (add_node_end(&(info->alias), str, 0) == NULL);
 }
+
+
+/**
+ * _myalias - function to mimics alias builtin (main alias)
+ * @info: Structure of potential arguments to maintain functon prototype
+ * Return: 0 (true)
+ */
+
+int _myalias(info_t *info)
+{
+	int i = 0;
+	char *p = NULL;
+	list_t *node = NULL;
+
+	if (info->argc == 1)
+	{
+		node = info->alias;
+		while (node)
+		{
+			print_alias(node);
+			node = node->next;
+		}
+		return (0);
+	}
+	for (i = 1; info->argv[i]; i++)
+	{
+		p = _strchr(info->argv[i], '=');
+		if (p)
+			set_alias(info, info->argv[i]);
+		else
+			print_alias(node_starts_with(info->alias, info->argv[i], '='));
+	}
+
+	return (0);
+}
