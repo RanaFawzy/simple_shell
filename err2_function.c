@@ -54,8 +54,8 @@ int _erratoi(char *s)
 
 /**
  * convert_number - function converts  a number
- * @num: input number
- * @base: the base
+ * @num: the input number
+ * @base: base.
  * @flags: argu flags
  * Return: str
  */
