@@ -130,7 +130,7 @@ ssize_t read_buf(info_t *info, char *buf, size_t *i)
 }
 
 /**
- * input_buf - chained commands buffer
+ * input_buf - function to chained command buffer
  * @info: parameter structure
  * @buf: buffer address
  * @len: address of length variable
