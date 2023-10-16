@@ -40,8 +40,8 @@ return (1);
 }
 
 /**
- * unset_alias - function that set alias to string
- * @info: the parameter structure
+ * unset_alias - function that sets alias to string
+ * @info: the parametr structur
  * @str: alias str
  * Return: 0 (on true)
  *         1 (on failure)
