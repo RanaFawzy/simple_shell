@@ -20,7 +20,7 @@ void remove_comments(char *buf)
 
 
 /**
- **_strncat - function used to concatenate 2 strings
+ **_strncat - function used to concatenates 2 strings
  *@dest: 1st string
  *@src: 2nd string
  *@n: maxima number of used bytes
