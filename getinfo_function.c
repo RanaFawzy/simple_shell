@@ -36,8 +36,8 @@ if (info->arg)
 
 
 /**
- * clear_info - function to initial info_t struct
- * @info: the address  structure
+ * clear_info - function that initial info_t struct
+ * @info: the addres  structre
  */
 
 
