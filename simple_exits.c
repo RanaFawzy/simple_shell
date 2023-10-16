@@ -51,7 +51,7 @@ char *_strncat(char *dest, char *src, int n)
 /**
  **_strchr - locates  character in a string
  *@s: str
- *@c:  charactethe r find
+ *@c: the charact r find
  *Return:  pointr (s)
  */
 char *_strchr(char *s, char c)
