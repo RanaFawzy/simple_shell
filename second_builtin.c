@@ -89,7 +89,7 @@ return (add_node_end(&(info->alias), str, 0) == NULL);
 
 /**
  * _myalias - function to mimics alias builtin (main alias)
- * @info: Structure of potential arguments to maintain functon prototype
+ * @info: Structure of potntial argument to maintain functon prototype
  * Return: 0 (true)
  */
 
