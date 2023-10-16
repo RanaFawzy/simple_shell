@@ -1,7 +1,7 @@
 #include "shell.h"
 
 /**
- * _setenv - function to define a new variable or upgrade an existing one
+ * _setenv - function to define  new variable or upgrades an existing one
  * @info: Struct of potential arguments maintain a prototype
  * @var: the string env var property
  * @value: string enviroment var value
