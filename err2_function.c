@@ -1,11 +1,11 @@
 #include "shell.h"
 
 /**
- * print_error - function write an error message
- * @info:  parameter and returns info struct
- * @estr: string containing specified error type
+ * print_error - function writes an error message
+ * @info:  parameter and return info struct
+ * @estr: string containing specifed error type
  * Return: 0 (number wasn’t string)
-  *              converted number
+ *              (converted number)
  *        -1 (false)
  */
 void print_error(info_t *info, char *estr)
