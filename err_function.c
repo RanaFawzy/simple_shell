@@ -2,7 +2,7 @@
 
 
 /**
- * _mysetenv - function Initial a new variable,upgrade existing one
+ * _mysetenv - function to Initial  new variable,upgrade existing one
  * @info: Struct of potential arguments maintain prototype.
  * Return: 0 (success)
  */
