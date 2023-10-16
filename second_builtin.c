@@ -61,3 +61,27 @@ int unset_alias(info_t *info, char *str)
 	*p = c;
 	return (ret);
 }
+
+
+
+/**
+ * set_alias - function to set alias to string
+ * @info: the parameter structure
+ * @str: alias str
+ * Return: 0 ( true)
+ *           1 failure
+ */
+
+int set_alias(info_t *info, char *str)
+{
+char *p;
+
+p = _strchr(str, '=');
+if (!p)
+	return (1);
+if (!*++p)
+	return (unset_alias(info, str));
+
+unset_alias(info, str);
+return (add_node_end(&(info->alias), str, 0) == NULL);
+}
