@@ -45,11 +45,11 @@ int _setenv(info_t *info, char *var, char *value)
 
 
 /**
- * _unsetenv - function delete an environment variable
+ * _unsetenv - function delete the environment variable
  * @info: Struct of potential arguments to maintain prototype.
  *  Return: 1 (success)
  *               0 else
- * @var: the string env var property
+ * @var: string env var property
  */
 
 
