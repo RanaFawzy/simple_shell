@@ -187,4 +187,7 @@ void ffree(char **);
 int _strlen(char *);
 char *starts_with(const char *, const char *);
 int _strcmp(char *, char *);
+/* toem_token-izer.c */
+char **strtow2(char *, char);
+char **strtow(char *, char *);
 
