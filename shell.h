@@ -176,4 +176,7 @@ size_t print_list_str(const list_t *);
 list_t *add_node_end(list_t **, const char *, int);
 int delete_node_at_index(list_t **, unsigned int);
 void free_list(list_t **);
+/* toem_memory_list.c */
+int bfree(void **);
+size_t list_len(const list_t *);
 
