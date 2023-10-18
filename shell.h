@@ -220,6 +220,7 @@ char *_strcat(char *, char *);
 char *_strcpy(char *, char *);
 int _putchar(char);
 char *_strdup(const char *);
+void _puts(char *);
 
 
 /* toem_token-izer.c */

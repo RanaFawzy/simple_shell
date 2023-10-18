@@ -60,3 +60,22 @@ for (length++; length--;)
 ret[length] = *--str;
 return (ret);
 }
+/**
+ * _puts - prints input sstring,....
+ * @str: string to bee printedd…
+ *
+ * Return: Nothing….
+ */
+void _puts(char *str)
+{
+	int i = 0;
+
+	if (!str)
+		return;
+	while (str[i] != '\0')
+	{
+		_putchar(str[i]);
+		i++;
+	}
+}
+
