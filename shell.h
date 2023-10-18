@@ -205,6 +205,7 @@ void ffree(char **);
 int hsh(info_t *, char **);
 void find_cmd(info_t *);
 int find_builtin(info_t *);
+void fork_cmd(info_t *);
 
 /* loophsh.c */
 int loophsh(char **);
