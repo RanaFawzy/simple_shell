@@ -170,4 +170,10 @@ int loophsh(char **);
 char *_strcpy(char *, char *);
 int _putchar(char);
 char *_strdup(const char *);
+/* toem_listso.c */
+list_t *add_node(list_t **, const char *, int);
+size_t print_list_str(const list_t *);
+list_t *add_node_end(list_t **, const char *, int);
+int delete_node_at_index(list_t **, unsigned int);
+void free_list(list_t **);
 
