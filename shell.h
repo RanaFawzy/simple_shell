@@ -104,4 +104,9 @@ int (*func)(info_t *);
 int interactive(info_t *);
 int _myexit(info_t *);
 int _mycd(info_t *);
+/* toem_environ_func.c */
+int _putsfd(char *str, int fd);
+int _myunsetenv(info_t *);
+int _myenv(info_t *);
+char *_getenv(info_t *, const char *);
 
