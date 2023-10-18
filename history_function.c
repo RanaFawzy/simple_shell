@@ -51,8 +51,8 @@ char *get_history_file(info_t *info)
 		return (NULL);
 	buf[0] = 0;
 	_strcpy(buf, dir);
-	_strcat(buf, "/");
-	_strcat(buf, HIST_FILE);
+	_strncat(buf, "/");
+	_strncat(buf, HIST_FILE);
 	return (buf);
 }
 
