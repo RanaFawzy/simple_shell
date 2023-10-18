@@ -164,4 +164,6 @@ char *find_path(info_t *, char *, char *);
 int hsh(info_t *, char **);
 void find_cmd(info_t *);
 int find_builtin(info_t *);
+/* loophsh.c */
+int loophsh(char **);
 
