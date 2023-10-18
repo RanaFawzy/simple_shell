@@ -179,4 +179,8 @@ void free_list(list_t **);
 /* toem_memory_list.c */
 int bfree(void **);
 size_t list_len(const list_t *);
+/* toem_realloc_list.c */
+char *_memset(char *, char, unsigned int);
+void *_realloc(void *, unsigned int, unsigned int);
+void ffree(char **);
 
