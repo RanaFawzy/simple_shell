@@ -109,4 +109,9 @@ int _putsfd(char *str, int fd);
 int _myunsetenv(info_t *);
 int _myenv(info_t *);
 char *_getenv(info_t *, const char *);
+/* toem_err2_function.c */
+void print_error(info_t *, char *);
+int _erratoi(char *);
+char *convert_number(long int, int, int);
+int print_d(int, int);
 
