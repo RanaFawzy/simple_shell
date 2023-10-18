@@ -130,4 +130,10 @@ int _myhelp(info_t *);
 /* toem_second_builtin.c */
 int _myhistory(info_t *);
 int _myalias(info_t *);
+/* toem_err_function.c */
+int _mysetenv(info_t *);
+int populate_env_list(info_t *);
+void _eputs(char *);
+int _eputchar(char);
+int _putfd(char c, int fd);
 
