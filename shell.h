@@ -29,3 +29,7 @@
 #define HIST_MAX	4096
 
 extern char **environ;
+/* for convert_numb() */
+#define CONVERT_LOWERCASE	1
+#define CONVERT_UNSIGNED	2
+
