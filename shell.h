@@ -190,4 +190,9 @@ int _strcmp(char *, char *);
 /* toem_token-izer.c */
 char **strtow2(char *, char);
 char **strtow(char *, char *);
+/* toem_vars_func.c */
+int is_chain(info_t *, char *, size_t *);
+int replace_alias(info_t *);
+void check_chain(info_t *, char *, size_t *, size_t, size_t);
 
+#endif
