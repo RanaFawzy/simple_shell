@@ -87,6 +87,6 @@ char **arg_array;
 arg_array = info->argv;
 _eputs("help call works. Function not yet implemented \n");
 if (0)
-	_eputs(*arg_array); /* temp att_unused workaround */
+	_puts(*arg_array); /* temp att_unused workaround */
 return (0);
 }
