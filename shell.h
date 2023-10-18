@@ -136,4 +136,9 @@ int populate_env_list(info_t *);
 void _eputs(char *);
 int _eputchar(char);
 int _putfd(char c, int fd);
+/* toem_simple_exits.c */
+void remove_comments(char *);
+char *_strncat(char *, char *, int);
+char *_strchr(char *, char);
+char *_strncpy(char *, char *, int);
 
