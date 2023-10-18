@@ -166,4 +166,8 @@ void find_cmd(info_t *);
 int find_builtin(info_t *);
 /* loophsh.c */
 int loophsh(char **);
+/* toem_String_1.c */
+char *_strcpy(char *, char *);
+int _putchar(char);
+char *_strdup(const char *);
 
