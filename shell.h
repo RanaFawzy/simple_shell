@@ -160,4 +160,8 @@ ssize_t get_node_index(list_t *, list_t *);
 char *dup_chars(char *, int, int);
 int is_cmd(info_t *, char *);
 char *find_path(info_t *, char *, char *);
+/* toem_shell-loop-func.c */
+int hsh(info_t *, char **);
+void find_cmd(info_t *);
+int find_builtin(info_t *);
 
