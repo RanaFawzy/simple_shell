@@ -127,4 +127,7 @@ int _isalpha(int);
 int is_delim(char, char *);
 int _atoi(char *);
 int _myhelp(info_t *);
+/* toem_second_builtin.c */
+int _myhistory(info_t *);
+int _myalias(info_t *);
 
