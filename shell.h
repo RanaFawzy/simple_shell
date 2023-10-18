@@ -32,4 +32,50 @@ extern char **environ;
 /* for convert_numb() */
 #define CONVERT_LOWERCASE	1
 #define CONVERT_UNSIGNED	2
+/**
+ * struct passinfo - contains pseudo-arguements to pass into function,.
+ * allowing uniform prototype for function pointerr structt..
+ * @arg: string generated from getline containing arguement,.
+ * @argv:array of strings generated from argg..
+ * @path:string path for the current command,..
+ * @argc:argument counts..
+ * @line_count:error counts..
+ * @err_num:error code for exit()s..
+ * @linecount_flag: if on count this line of input,.
+ * @fname:program file name,..
+ * @env: linked list local copy of environn,..
+ * @environ: custom modified copy of environ from LL env,.
+ * @history:history nodee.
+ * @alias:alias nodee.
+ * @env_changed:if environ was changed,.
+ * @readfd:fd from which to read line input,.
+ * @histcount:history line number county,..
+ * @status:return status of last exec'd command.
+ * @cmd_buf: address of pointer cmd_buf, on if chaining.
+ * @cmd_buf_type: CMD_type ||, &&, ;
+ */
+typedef struct passinfo
+{
+char *arg;
+char **argv;
+char *path;
+int argc;
+unsigned int line_count;
+int err_num;
+int linecount_flag;
+char *fname;
+list_t *env;
+list_t *history;
+list_t *alias;
+char **environ;
+int env_changed;
+int status;
+char **cmd_buf; /* pointer cmd ; chain bufferr, for memorry mangement */
+int cmd_buf_type; /* CMD_type ||, &&, ; */
+int readfd;
+int histcount;
+} info_t;
+#define INFO_INIT \
+{NULL, NULL, NULL, 0, 0, 0, 0, NULL, NULL, NULL, NULL, NULL, 0, 0, NULL, \
+0, 0, 0}
 
