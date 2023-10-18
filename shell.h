@@ -183,4 +183,8 @@ size_t list_len(const list_t *);
 char *_memset(char *, char, unsigned int);
 void *_realloc(void *, unsigned int, unsigned int);
 void ffree(char **);
+/* toem_string_0.c */
+int _strlen(char *);
+char *starts_with(const char *, const char *);
+int _strcmp(char *, char *);
 
