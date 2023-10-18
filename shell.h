@@ -90,4 +90,14 @@ int num;
 char *str;
 struct liststr *next;
 } list_t;
+/**
+ * @type:builtin command flagg,,.
+ * struct builtin - containss  builtin string and related function,.
+ * @func:functionn,.
+ */
+typedef struct builtin
+{
+char *type;
+int (*func)(info_t *);
+} builtin_table;
 
