@@ -78,28 +78,31 @@ int histcount;
 #define INFO_INIT \
 {NULL, NULL, NULL, 0, 0, 0, 0, NULL, NULL, NULL, NULL, NULL, 0, 0, NULL, \
 0, 0, 0}
+
 /**
- * @num: the numb field..
- * struct liststr - singly linked lists,..
- * @next: points to the next nodes..
- * @str: string
+ * struct liststr - singly linked list
+ * @num: the number field
+ * @str: a string
+ * @next: points to the next node
  */
 typedef struct liststr
 {
-int num;
-char *str;
-struct liststr *next;
+	int num;
+	char *str;
+	struct liststr *next;
 } list_t;
 /**
- * @type:builtin command flagg,,.
- * struct builtin - containss  builtin string and related function,.
- * @func:functionn,.
+ * struct builtin - contains a builtin string and related function
+ * @type: the builtin command flag
+ * @func: the function
  */
 typedef struct builtin
 {
-char *type;
-int (*func)(info_t *);
+	char *type;
+	int (*func)(info_t *);
 } builtin_table;
+
+
 /* toem_first_builtin.c */
 int interactive(info_t *);
 int _myexit(info_t *);
