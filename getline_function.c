@@ -1,5 +1,47 @@
 #include "shell.h"
 
+/**
+ * input_buf - chained commands buffer
+ * @info: parameter structure
+ * @buf: buffer address
+ * @len: address of length variable
+ * Return: number of bytes
+ */
+ssize_t input_buf(info_t *info, char **buf, size_t *len)
+{
+	ssize_t r = 0;
+	size_t len_p = 0;
+
+	if (!*len) /* if nothing left in  buffer, fill it */
+	{
+		/*bfree((void **)info->cmd_buf);*/
+		free(*buf);
+		*buf = NULL;
+		signal(SIGINT, sigintHandler);
+#if USE_GETLINE
+		r = getline(buf, &len_p, stdin);
+#else
+		r = _getline(info, buf, &len_p);
+#endif
+		if (r > 0)
+		{
+			if ((*buf)[r - 1] == '\n')
+			{
+				(*buf)[r - 1] = '\0'; /* removes trailing newline */
+				r--;
+			}
+			info->linecount_flag = 1;
+			remove_comments(*buf);
+			build_history_list(info, *buf, info->histcount++);
+			/* if (_strchr(*buf, ';')) is this  command chain? */
+			{
+				*len = r;
+				info->cmd_buf = buf;
+			}
+		}
+	}
+	return (r);
+}
 
 
 /**
@@ -44,6 +86,28 @@ ssize_t get_input(info_t *info)
 
 	*buf_p = buf; /* else not a chain pass back buffer from _getline() */
 	return (r); /* return len of buffer from _getline() */
+}
+
+
+
+/**
+ * read_buf - function used to read a buffer
+ * @info: parameter structure
+ * @buf: buffer
+ * @i: size
+ * Return: r
+ */
+
+ssize_t read_buf(info_t *info, char *buf, size_t *i)
+{
+	ssize_t r = 0;
+
+	if (*i)
+		return (0);
+	r = read(info->readfd, buf, READ_BUF_SIZE);
+	if (r >= 0)
+		*i = r;
+	return (r);
 }
 
 
