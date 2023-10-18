@@ -50,3 +50,20 @@ return (0);
 else
 return (*s1 < *s2 ? -1 : 1);
 }
+/**
+ * _strcat - conccatenates 2 sstrings,..
+ * @src: the ssource bufferrr,..
+ * @dest: the ddestination bufferrr,..
+ *
+ * Return: ppointer to destination bufferrr,..
+ */
+char *_strcat(char *dest, char *src)
+{
+char *ret = dest;
+while (*dest)
+dest++;
+while (*src)
+*dest++ = *src++;
+*dest = *src;
+return (ret);
+}

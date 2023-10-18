@@ -214,6 +214,7 @@ int loophsh(char **);
 int _strlen(char *);
 char *starts_with(const char *, const char *);
 int _strcmp(char *, char *);
+char *_strcat(char *, char *);
 
 /* toem_String_1.c */
 char *_strcpy(char *, char *);
