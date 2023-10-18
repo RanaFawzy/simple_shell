@@ -36,6 +36,37 @@ return (0);
 return (1);
 }
 /**
+*check_chain - checks we should continue chaining based on last statuss…
+ * @p: address of current position in buff,,,
+ * @buf: the char bufferr,....
+ * @i: starting position in buff,,,
+ * @info: the parameter structt….
+ * @len: length of buff,,,,
+ *
+ * Return: Void…
+ */
+void check_chain(info_t *info, char *buf, size_t *p, size_t i, size_t len)
+{
+size_t j = *p;
+if (info->cmd_buf_type == CMD_AND)
+{
+if (info->status)
+{
+buf[i] = 0;
+j = len;
+}
+}
+if (info->cmd_buf_type == CMD_OR)
+{
+if (!info->status)
+{
+buf[i] = 0;
+j = len;
+}
+}
+*p = j;
+}
+/**
  * replace_vars - replaces vars in tokenized string,....
  * @info: the parameter structt,.,...
  *
@@ -76,66 +107,8 @@ int replace_vars(info_t *info)
 	return (0);
 }
 /**
- * check_chain - checks we should continue chaining based on last statuss…
- * @p: address of current position in buff,,,
- * @buf: the char bufferr,....
- * @i: starting position in buff,,,
- * @info: the parameter structt….
- * @len: length of buff,,,,
- *
- * Return: Void…
- */
-void check_chain(info_t *info, char *buf, size_t *p, size_t i, size_t len)
-{
-size_t j = *p;
-if (info->cmd_buf_type == CMD_AND)
-{
-if (info->status)
-{
-buf[i] = 0;
-j = len;
-}
-}
-if (info->cmd_buf_type == CMD_OR)
-{
-if (!info->status)
-{
-buf[i] = 0;
-j = len;
-}
-}
-*p = j;
-}
-/**
- * replace_alias - replacess aliases in the tokenized stringg,...
- * @info:  parameter structt,..
- *
- * Return: 1 if replaced, 0 otherwise….
- */
-int replace_alias(info_t *info)
-{
-int i;
-list_t *node;
-char *p;
-for (i = 0; i < 10; i++)
-{
-node = node_starts_with(info->alias, info->argv[0], '=');
-if (!node)
-return (0);
-free(info->argv[0]);
-p = _strchr(node->str, '=');
-if (!p)
-return (0);
-p = _strdup(p + 1);
-if (!p)
-return (0);
-info->argv[0] = p;
-}
-return (1);
-}
-/**
- * replace_string - replaces string,.,.,.
- * @new: new string,.,..
+ * replace_stringg - replaces string,.,.
+ * @new: new sstring,.,..
  * @old: address of old string,...
  *
  * Return: 1 if replaced, 0 otherwiseem,,,...
