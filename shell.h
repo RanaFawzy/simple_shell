@@ -122,4 +122,9 @@ void sigintHandler(int);
 void set_info(info_t *, char **);
 void clear_info(info_t *);
 void free_info(info_t *, int);
+/* toem_simple_atoi.c */
+int _isalpha(int);
+int is_delim(char, char *);
+int _atoi(char *);
+int _myhelp(info_t *);
 
