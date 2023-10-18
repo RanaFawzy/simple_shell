@@ -16,3 +16,8 @@
 #define CMD_OR		1
 #define CMD_AND		2
 #define CMD_CHAIN	3
+
+/* for read/write bufferr */
+#define READ_BUF_SIZE 1024
+#define WRITE_BUF_SIZE 1024
+#define BUF_FLUSH -1
