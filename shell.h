@@ -114,4 +114,8 @@ void print_error(info_t *, char *);
 int _erratoi(char *);
 char *convert_number(long int, int, int);
 int print_d(int, int);
+/*toem_getline_function.c */
+ssize_t get_input(info_t *);
+int _getline(info_t *, char **, size_t *);
+void sigintHandler(int);
 
