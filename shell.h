@@ -141,4 +141,8 @@ void remove_comments(char *);
 char *_strncat(char *, char *, int);
 char *_strchr(char *, char);
 char *_strncpy(char *, char *, int);
+/* toem_getenviron.c */
+int _setenv(info_t *, char *, char *);
+char **get_environ(info_t *);
+int _unsetenv(info_t *, char *);
 
