@@ -32,8 +32,8 @@ if (node)
 	for (a = node->str; a <= p; a++)
 	_putchar(*a);
 	_putchar('\'');
-	_puts(p + 1);
-	_puts("'\n");
+	_eputs(p + 1);
+	_eputs("'\n");
 	return (0);
 }
 return (1);
